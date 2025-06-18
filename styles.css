@@ -1,0 +1,123 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f6f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #004080;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.quote {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #b0d4ff;
+}
+
+/* Sections */
+.section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section.alt {
+  background: #e9f1fb;
+}
+
+.section h2 {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+/* Grids */
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.flex-grid > div {
+  flex: 1 1 300px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th {
+  background: #004080;
+  color: white;
+  padding: 0.75rem;
+}
+
+td {
+  padding: 0.75rem;
+  background: white;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  color: #004080;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #004080;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #002b5c;
+}
+
+/* Footer */
+footer {
+  background: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
