@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>e-QualyT | From the Field, To the App</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>e-QualyT – From the Field, To the App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
       box-sizing: border-box;
@@ -15,137 +14,151 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      background: #f5f9ff;
-      color: #333;
+      background: #f3f7fc;
+      color: #2d2d2d;
     }
-    header {
-      background: linear-gradient(135deg, #0074cc, #00a4a8);
+    .container {
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+    }
+    .left-card {
+      background: linear-gradient(160deg, #004080, #0074cc);
       color: white;
-      padding: 3rem 1rem;
+      flex: 0 0 320px;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+    .left-card img {
+      width: 120px;
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .left-card h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .left-card p {
+      font-style: italic;
+      font-size: 0.95rem;
+      opacity: 0.85;
       text-align: center;
     }
-    header img.logo {
-      width: 100px;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    .main-content {
+      flex: 1;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-    }
-    header p.tagline {
-      font-size: 1.25rem;
-      margin-top: 0.5rem;
-      opacity: 0.95;
-    }
-    .section {
-      padding: 3rem 1rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .section h2 {
-      font-size: 2rem;
-      color: #005c99;
+    .hero h2 {
+      font-size: 2.25rem;
+      color: #004080;
       margin-bottom: 1rem;
     }
-    .section ul {
-      padding-left: 1.5rem;
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-    .features-grid ul li {
-      margin-bottom: 0.75rem;
-    }
-    .highlight {
-      background: #e3f2fd;
-      border-left: 5px solid #0074cc;
-      padding: 1rem;
+    .hero p {
+      font-size: 1.1rem;
       margin-bottom: 2rem;
+      max-width: 600px;
     }
-    .download {
-      display: block;
-      width: max-content;
-      margin: 2rem auto;
+    .cta-button {
+      display: inline-block;
       background: #0074cc;
       color: white;
       padding: 0.75rem 1.5rem;
-      text-decoration: none;
       border-radius: 8px;
-      font-weight: bold;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .cta-button:hover {
+      background: #005fa3;
+    }
+    .features {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .feature {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+    }
+    .feature i {
+      font-size: 1.5rem;
+      color: #0074cc;
+      margin-bottom: 0.5rem;
+    }
+    .feature h4 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
     }
     footer {
       text-align: center;
-      padding: 2rem;
-      background: #00334d;
+      padding: 1.5rem;
+      background: #001f3f;
       color: #ccc;
       font-size: 0.875rem;
     }
     @media (max-width: 768px) {
-      .features-grid {
-        grid-template-columns: 1fr;
+      .container {
+        flex-direction: column;
+      }
+      .left-card {
+        flex: none;
+        width: 100%;
+        padding: 2rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="assets/logo.png" alt="e-QualyT Logo" class="logo" />
-    <h1>e-QualyT</h1>
-    <p class="tagline">From the Field, To the App</p>
-  </header>
-
-  <section class="section">
-    <div class="highlight">
-      <strong>Designed by a Civil Engineer, for the Field.</strong>
-      Built for dusty sites, weak signals, and real workflows—not a desktop form ported to mobile.
+  <div class="container">
+    <div class="left-card">
+      <img src="assets/logo.png" alt="e-QualyT Logo">
+      <h1>e-QualyT</h1>
+      <p>From the Field, To the App</p>
     </div>
+    <div class="main-content">
+      <div class="hero">
+        <h2>Field-Proven QMS. Zero Compromise.</h2>
+        <p>Built by a Civil Engineer, e-QualyT solves real quality management challenges faced on construction sites — not from a desk.</p>
+        <a class="cta-button" href="#">📅 Schedule a Demo</a>
+      </div>
 
-    <h2>Why e-QualyT?</h2>
-    <ul>
-      <li>✅ Enforced checklist logic — Pre > During > Post</li>
-      <li>✅ Save drafts mid-way without data loss</li>
-      <li>✅ Avoid duplicate checklists intelligently</li>
-      <li>✅ Get auto task reminders & scoring system</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2>Included Modules</h2>
-    <div class="features-grid">
-      <ul>
-        <li>🧱 Observations</li>
-        <li>🧾 MIR (Material Inspection Requests)</li>
-        <li>⚠️ NCR (Non-Conformance Reports)</li>
-        <li>🛠️ WIR (Work Inspection Requests)</li>
-      </ul>
-      <ul>
-        <li>📁 Reports & Trackers</li>
-        <li>⚙️ Project, Site & User Setup</li>
-        <li>📋 Checklist Templates</li>
-        <li>📊 Admin Configuration</li>
-      </ul>
+      <div class="features">
+        <div class="feature">
+          <i class="fas fa-check-circle"></i>
+          <h4>Checklist Flow Logic</h4>
+          <p>Pre → During → Post enforcement ensures quality isn't skipped.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-database"></i>
+          <h4>Draft + Duplicate Prevention</h4>
+          <p>Smart logic saves progress and avoids multiple entries.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-bell"></i>
+          <h4>Reminders + Scoring</h4>
+          <p>Remind users of tasks and reward timely completions.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-mobile-alt"></i>
+          <h4>Made for Site</h4>
+          <p>Offline-ready, fast sync, and designed for dusty fingers.</p>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <section class="section">
-    <h2>Built for Construction</h2>
-    <ul>
-      <li>📱 Android-first, offline-capable</li>
-      <li>🔐 Role-based access and project scoping</li>
-      <li>📶 Smooth sync with FastAPI + PostgreSQL</li>
-      <li>📢 Optional Scoring System & Taskboard</li>
-    </ul>
-  </section>
-
-  <a class="download" href="brochure.pdf" download>📥 Download Brochure (PDF)</a>
-
+  </div>
   <footer>
-    &copy; 2025 e-QualyT | Built in India | Engineered by Field Experts
+    &copy; 2025 e-QualyT | Made in India | Built with FastAPI + PostgreSQL
   </footer>
 </body>
 </html>
